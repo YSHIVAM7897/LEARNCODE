@@ -1,5 +1,0 @@
- .dropdown-menu {
-  max-height: 200px;
-  max-width: 100%;
-  overflow-y: auto; /* scroll available without popup misalign */
-}
