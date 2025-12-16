@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "question": "What does CSS stand for?",
+    "options": [
+      "Creative Style Sheets",
+      "Cascading Style Sheets",
+      "Computer Style Syntax",
+      "Colorful Styling System"
+    ],
+    "correct": "Cascading Style Sheets"
+  },
+  {
+    "id": 2,
+    "question": "Which property is used to change the background color of an element?",
+    "options": ["color", "bg-color", "background-color", "fill-color"],
+    "correct": "background-color"
+  },
+  {
+    "id": 3,
+    "question": "The three key components of the CSS Box Model (excluding the content) are:",
+    "options": [
+      "Text, Image, Border",
+      "Height, Width, Depth",
+      "Margin, Padding, Border",
+      "Position, Float, Display"
+    ],
+    "correct": "Margin, Padding, Border"
+  },
+  {
+    "id": 4,
+    "question": "Which CSS property is used to set the spacing inside an element's border, between the border and the content?",
+    "options": ["margin", "padding", "spacing", "inner-space"],
+    "correct": "padding"
+  },
+  {
+    "id": 5,
+    "question": "How do you select an HTML element with the class attribute set to 'header-title'?",
+    "options": [
+      "#header-title",
+      "header-title",
+      ".header-title",
+      "*header-title"
+    ],
+    "correct": ".header-title"
+  },
+  {
+    "id": 6,
+    "question": "The em unit is relative to the font size of which element?",
+    "options": [
+      "The root <html> element.",
+      "The parent element.",
+      "The browser's default font size.",
+      "The viewport width."
+    ],
+    "correct": "The parent element."
+  },
+  {
+    "id": 7,
+    "question": "Which property is used to make a flexible layout that aligns items along a single row or column?",
+    "options": [
+      "display: grid;",
+      "display: flex;",
+      "display: block;",
+      "display: inline;"
+    ],
+    "correct": "display: flex;"
+  },
+  {
+    "id": 8,
+    "question": "What is the highest-ranking (most specific) type of selector in CSS (excluding inline styles)?",
+    "options": [
+      "ID Selector (#)",
+      "Element Selector (p)",
+      "Class Selector (.)",
+      "Universal Selector (*)"
+    ],
+    "correct": "ID Selector (#)"
+  },
+  {
+    "id": 9,
+    "question": "Which pseudo-class is correctly used to style an element when the user's mouse pointer is over it?",
+    "options": [":active", "::before", "::hover", "::on-mouse-over"],
+    "correct": ":hover"
+  },
+  {
+    "id": 10,
+    "question": "The default value for the position property in CSS is:",
+    "options": ["fixed", "absolute", "static", "relative"],
+    "correct": "static"
+  },
+  {
+    "id": 11,
+    "question": "Which declaration is used to horizontally center a block-level element within its parent?",
+    "options": [
+      "text-align: center;",
+      "align: center;",
+      "margin: auto;",
+      "float: center;"
+    ],
+    "correct": "margin: auto;"
+  },
+  {
+    "id": 12,
+    "question": "Which property is used to specify the distance outside an element's border, creating space between elements?",
+    "options": ["padding", "margin", "spacing", "border-spacing"],
+    "correct": "margin"
+  },
+  {
+    "id": 13,
+    "question": "How do you set a text color that is 50% transparent, using the RGBA color model?",
+    "options": [
+      "color: rgba(0, 0, 0, 0.5);",
+      "color: transparent(50);",
+      "color: rgb(50%, 0, 0, 0);",
+      "color: opacity(0.5);"
+    ],
+    "correct": "color: rgba(0, 0, 0, 0.5);"
+  },
+  {
+    "id": 14,
+    "question": "What is the primary function of a Media Query?",
+    "options": [
+      "To include external JavaScript files.",
+      "To load different content based on user location.",
+      "To apply different styles based on device characteristics (like screen size).",
+      "To apply styles only to printed documents."
+    ],
+    "correct": "To apply different styles based on device characteristics (like screen size)."
+  },
+  {
+    "id": 15,
+    "question": "Which display value allows an element to flow with text (inline) but also accept width and height properties?",
+    "options": ["block", "inline", "inline-block", "flex"],
+    "correct": "inline-block"
+  },
+  {
+    "id": 16,
+    "question": "The rem unit is relative to the font size of which element?",
+    "options": [
+      "The parent element.",
+      "The root <html> element.",
+      "The browser's default font size.",
+      "The element itself."
+    ],
+    "correct": "The root <html> element."
+  },
+  {
+    "id": 17,
+    "question": "What property in Flexbox is used to align flex items along the cross-axis?",
+    "options": [
+      "justify-content",
+      "align-content",
+      "flex-direction",
+      "align-items"
+    ],
+    "correct": "align-items"
+  },
+  {
+    "id": 18,
+    "question": "To include an external stylesheet named style.css in an HTML document, you should use:",
+    "options": [
+      "<style src=\"style.css\">",
+      "<link rel=\"stylesheet\" href=\"style.css\">",
+      "<script src=\"style.css\">",
+      "<import url=\"style.css\">"
+    ],
+    "correct": "<link rel=\"stylesheet\" href=\"style.css\">"
+  },
+  {
+    "id": 19,
+    "question": "Which CSS property is used to control the stacking order of overlapping elements?",
+    "options": ["order", "z-index", "depth", "stacking"],
+    "correct": "z-index"
+  },
+  {
+    "id": 20,
+    "question": "The shorthand property for setting the top, right, bottom, and left margins in one declaration is:",
+    "options": ["spacing", "padding", "margin", "box-model"],
+    "correct": "margin"
+  },
+  {
+    "id": 21,
+    "question": "Which selector correctly selects all <a> tags that are immediately preceded by a <p> tag?",
+    "options": ["p + a", "p > a", "p a", "p ~ a"],
+    "correct": "p + a"
+  },
+  {
+    "id": 22,
+    "question": "What is the primary difference between visibility: hidden; and display: none;?",
+    "options": [
+      "visibility: hidden; hides the element but keeps the space.",
+      "display: none; hides the element but keeps the space.",
+      "They are functionally identical.",
+      "visibility: hidden; only works on text."
+    ],
+    "correct": "visibility: hidden; hides the element but keeps the space."
+  },
+  {
+    "id": 23,
+    "question": "In CSS Grid, what is the property used on the container to define the columns and rows of the grid?",
+    "options": [
+      "grid-template-areas",
+      "grid-gap",
+      "display: grid;",
+      "grid-template"
+    ],
+    "correct": "grid-template"
+  },
+  {
+    "id": 24,
+    "question": "Which of these is a valid way to specify a fallback font stack in CSS?",
+    "options": [
+      "font-family: Arial, Helvetica, sans-serif;",
+      "font-family: 'Arial' then 'Helvetica';",
+      "font-family: (Arial) or (Helvetica);",
+      "font-family: Arial | Helvetica | sans-serif;"
+    ],
+    "correct": "font-family: Arial, Helvetica, sans-serif;"
+  },
+  {
+    "id": 25,
+    "question": "Which selector targets an element that has neither an ID nor a class?",
+    "options": [
+      "p:only",
+      "A type selector (e.g., div)",
+      "The universal selector (*)",
+      ":empty"
+    ],
+    "correct": "A type selector (e.g., div)"
+  }
+]

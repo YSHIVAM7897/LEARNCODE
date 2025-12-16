@@ -1,0 +1,237 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following is the standard command for compiling a C++ source file named main.cpp using the GNU Compiler Collection (GCC)?",
+    "options": [
+      "gcc main.cpp -o main",
+      "g++ main.cpp -o main",
+      "compile main.cpp",
+      "cplusplus main.cpp"
+    ],
+    "correct": "g++ main.cpp -o main"
+  },
+  {
+    "id": 2,
+    "question": "What is the memory area where local variables, function calls, and function parameters are stored?",
+    "options": ["Heap", "Static/Global Storage", "Stack", "Data Segment"],
+    "correct": "Stack"
+  },
+  {
+    "id": 3,
+    "question": "Which keyword is used to explicitly allocate memory on the Heap in C++?",
+    "options": ["malloc", "allocate", "new", "ptr"],
+    "correct": "new"
+  },
+  {
+    "id": 4,
+    "question": "What is the primary purpose of a virtual function in C++?",
+    "options": [
+      "To prevent the function from being overridden in derived classes.",
+      "To enable runtime polymorphism (dynamic dispatch).",
+      "To make the function execute faster.",
+      "To allow the function to be called without creating an object."
+    ],
+    "correct": "To enable runtime polymorphism (dynamic dispatch)."
+  },
+  {
+    "id": 5,
+    "question": "The C++ principle of Encapsulation primarily involves combining data and methods that operate on the data into a single unit (like a class). What is the other key aspect of Encapsulation?",
+    "options": [
+      "Function Overloading",
+      "Runtime Polymorphism",
+      "Information Hiding (access restriction)",
+      "Template Programming"
+    ],
+    "correct": "Information Hiding (access restriction)"
+  },
+  {
+    "id": 6,
+    "question": "Which header file must be included to use the std::cout and std::cin objects?",
+    "options": ["<string>", "<iomanip>", "<iostream>", "<stdio.h>"],
+    "correct": "<iostream>"
+  },
+  {
+    "id": 7,
+    "question": "What is a smart pointer in C++ (like std::unique_ptr or std::shared_ptr) designed to prevent?",
+    "options": [
+      "Compile-time errors",
+      "Function recursion",
+      "Memory leaks",
+      "Stack overflows"
+    ],
+    "correct": "Memory leaks"
+  },
+  {
+    "id": 8,
+    "question": "What is the name of the function that is automatically called when an object of a class goes out of scope or is explicitly destroyed?",
+    "options": ["Constructor", "Destructor", "Finalizer", "Cleaner"],
+    "correct": "Destructor"
+  },
+  {
+    "id": 9,
+    "question": "In C++, what is a Template?",
+    "options": [
+      "A preprocessor directive for file inclusion.",
+      "A function or class that operates with generic types.",
+      "A way to define constants at compile time.",
+      "A special type of derived class."
+    ],
+    "correct": "A function or class that operates with generic types."
+  },
+  {
+    "id": 10,
+    "question": "What is the primary data structure used by std::vector?",
+    "options": [
+      "Linked List",
+      "Dynamically Sized Array",
+      "Hash Map",
+      "Binary Tree"
+    ],
+    "correct": "Dynamically Sized Array"
+  },
+  {
+    "id": 11,
+    "question": "If you want a function to modify the value of a variable passed to it, but you don't want to use pointers, what mechanism should you use?",
+    "options": [
+      "Pass by Value",
+      "Pass by Reference",
+      "Pass by Address",
+      "Pass by Object"
+    ],
+    "correct": "Pass by Reference"
+  },
+  {
+    "id": 12,
+    "question": "What is the result of using the :: operator (Scope Resolution Operator)?",
+    "options": [
+      "To define a pointer to a member function.",
+      "To access a static member of a class.",
+      "To explicitly access a namespace or a class member from outside the class.",
+      "To define an alias for a data type."
+    ],
+    "correct": "To explicitly access a namespace or a class member from outside the class."
+  },
+  {
+    "id": 13,
+    "question": "Which C++ feature allows a function with the same name to have different definitions based on the number or type of its arguments?",
+    "options": [
+      "Function Overriding",
+      "Function Polymorphism",
+      "Function Overloading",
+      "Virtual Functions"
+    ],
+    "correct": "Function Overloading"
+  },
+  {
+    "id": 14,
+    "question": "In a C++ class, what is the default access specifier for members if none is explicitly specified?",
+    "options": ["public", "private", "protected", "friend"],
+    "correct": "private"
+  },
+  {
+    "id": 15,
+    "question": "What does RAII stand for?",
+    "options": [
+      "Resource Access and Initialization Interface",
+      "Reallocate All Instance Internals",
+      "Resource Acquisition Is Initialization",
+      "Recursive Algorithm Implementation Interface"
+    ],
+    "correct": "Resource Acquisition Is Initialization"
+  },
+  {
+    "id": 16,
+    "question": "Which of the following is an example of an lvalue in C++?",
+    "options": [
+      "The expression a + b",
+      "The number 5",
+      "A variable name x",
+      "The result of a function call that returns a temporary value"
+    ],
+    "correct": "A variable name x"
+  },
+  {
+    "id": 17,
+    "question": "What is the purpose of the const keyword when applied to a member function of a class (e.g., void print() const;)?",
+    "options": [
+      "It prevents the function from being overloaded.",
+      "It ensures the function can only be called by constant objects.",
+      "It guarantees the function will not modify any member data of the object.",
+      "It makes the function static."
+    ],
+    "correct": "It guarantees the function will not modify any member data of the object."
+  },
+  {
+    "id": 18,
+    "question": "Which Standard Library component is the most efficient for storing a large number of key-value pairs where the keys are unique and insertion/lookup time is, on average, O(1)?",
+    "options": ["std::map", "std::unordered_map", "std::vector", "std::list"],
+    "correct": "std::unordered_map"
+  },
+  {
+    "id": 19,
+    "question": "What does the std::move() function do in modern C++?",
+    "options": [
+      "It physically moves data from one location to another in memory.",
+      "It performs a deep copy of an object.",
+      "It converts an lvalue into an rvalue reference, enabling move semantics.",
+      "It deletes an object and moves the pointer to null."
+    ],
+    "correct": "It converts an lvalue into an rvalue reference, enabling move semantics."
+  },
+  {
+    "id": 20,
+    "question": "What is the condition that makes a C++ class an Abstract Class?",
+    "options": [
+      "It has no constructor.",
+      "It is inherited from another class.",
+      "It contains at least one pure virtual function.",
+      "It has only protected members."
+    ],
+    "correct": "It contains at least one pure virtual function."
+  },
+  {
+    "id": 21,
+    "question": "How do you include an external C library header file (like stdio.h) in C++ using the recommended C++ style, without the .h extension and inside the std namespace?",
+    "options": [
+      "#include <stdio>",
+      "#include <cstdio>",
+      "#include <c_stdio>",
+      "#include <iostream.h>"
+    ],
+    "correct": "#include <cstdio>"
+  },
+  {
+    "id": 22,
+    "question": "The auto keyword in C++11 and later is primarily used for:",
+    "options": [
+      "Automatic memory deallocation.",
+      "Declaring a function as automatic.",
+      "Type deduction for variables based on their initializer.",
+      "Defining a variable with global scope."
+    ],
+    "correct": "Type deduction for variables based on their initializer."
+  },
+  {
+    "id": 23,
+    "question": "When an exception is thrown in a C++ program, which block of code is responsible for handling that exception?",
+    "options": ["try", "throw", "catch", "finally"],
+    "correct": "catch"
+  },
+  {
+    "id": 24,
+    "question": "What are Iterators in the C++ Standard Template Library (STL)?",
+    "options": [
+      "Special pointers used to traverse containers.",
+      "A type of class that holds only numerical data.",
+      "A synonym for a loop structure.",
+      "Functions that sort the container elements."
+    ],
+    "correct": "Special pointers used to traverse containers."
+  },
+  {
+    "id": 25,
+    "question": "Which operator is used to deallocate memory previously allocated by the new operator?",
+    "options": ["free", "delete", "remove", "unalloc"],
+    "correct": "delete"
+  }
+]

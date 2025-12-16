@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "Which keyword is used to prevent a class from being subclassed in Java?",
+    "options": ["static", "abstract", "final", "private"],
+    "correct": "final"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is NOT a primitive data type in Java?",
+    "options": ["int", "boolean", "String", "char"],
+    "correct": "String"
+  },
+  {
+    "id": 3,
+    "question": "What is the result of the expression 10 / 3 in Java (when both are integers)?",
+    "options": ["3.333...", "3", "3.0", "4"],
+    "correct": "3"
+  },
+  {
+    "id": 4,
+    "question": "Which access modifier means that a member is visible only within its own class?",
+    "options": ["public", "protected", "default (package-private)", "private"],
+    "correct": "private"
+  },
+  {
+    "id": 5,
+    "question": "What is the primary purpose of the static keyword when applied to a method?",
+    "options": [
+      "It guarantees the method will run quickly.",
+      "It allows the method to be called without creating an instance of the class.",
+      "It makes the method accessible only within the class.",
+      "It is used for multi-threading purposes."
+    ],
+    "correct": "It allows the method to be called without creating an instance of the class."
+  },
+  {
+    "id": 6,
+    "question": "Which try-catch block clause is guaranteed to execute, regardless of whether an exception is thrown or caught?",
+    "options": ["catch", "throw", "finally", "throws"],
+    "correct": "finally"
+  },
+  {
+    "id": 7,
+    "question": "What is the name of the process by which a superclass reference variable refers to a subclass object?",
+    "options": ["Encapsulation", "Polymorphism", "Abstraction", "Inheritance"],
+    "correct": "Polymorphism"
+  },
+  {
+    "id": 8,
+    "question": "In Java, if a method signature is identical to a method in its superclass, this is known as:",
+    "options": [
+      "Method Overloading",
+      "Method Binding",
+      "Method Overriding",
+      "Method Hiding"
+    ],
+    "correct": "Method Overriding"
+  },
+  {
+    "id": 9,
+    "question": "Which of these interfaces provides a mechanism for storing unique elements in no particular order?",
+    "options": ["List", "Map", "Set", "Queue"],
+    "correct": "Set"
+  },
+  {
+    "id": 10,
+    "question": "What is the default initial capacity of an ArrayList when created with the default constructor?",
+    "options": ["0", "1", "10", "16"],
+    "correct": "10"
+  },
+  {
+    "id": 11,
+    "question": "Which exception type is usually associated with accessing an array index that is out of bounds?",
+    "options": [
+      "IndexOutOfBoundsException",
+      "NullPointerException",
+      "IllegalArgumentException",
+      "IOException"
+    ],
+    "correct": "IndexOutOfBoundsException"
+  },
+  {
+    "id": 12,
+    "question": "What is the name of the tool provided by the Java Development Kit (JDK) for cleaning up unreferenced objects in memory?",
+    "options": [
+      "Memory Manager",
+      "Object Purifier",
+      "Garbage Collector",
+      "Cleanup Utility"
+    ],
+    "correct": "Garbage Collector"
+  },
+  {
+    "id": 13,
+    "question": "Which of these is the correct way to iterate over a List of strings in modern Java (Enhanced For Loop)?",
+    "options": [
+      "for (int i : list)",
+      "for (String s : list)",
+      "for (list.get(i) : list)",
+      "for (s.String : list)"
+    ],
+    "correct": "for (String s : list)"
+  },
+  {
+    "id": 14,
+    "question": "When must a method be declared with the throws keyword?",
+    "options": [
+      "When it handles a checked exception.",
+      "When it might throw an unchecked exception.",
+      "When it might throw a checked exception that it does not catch.",
+      "When it is a static method."
+    ],
+    "correct": "When it might throw a checked exception that it does not catch."
+  },
+  {
+    "id": 15,
+    "question": "What does the break statement do inside a switch statement?",
+    "options": [
+      "It causes the program to exit.",
+      "It terminates the loop containing the switch.",
+      "It terminates the switch statement and execution continues after it.",
+      "It jumps to the next case label."
+    ],
+    "correct": "It terminates the switch statement and execution continues after it."
+  },
+  {
+    "id": 16,
+    "question": "What is the purpose of the super keyword in a subclass constructor?",
+    "options": [
+      "To call the superclass's non-parameterized constructor.",
+      "To call the superclass's constructor (explicitly or implicitly, parameterized or not).",
+      "To create a new instance of the superclass.",
+      "To access private members of the superclass."
+    ],
+    "correct": "To call the superclass's constructor (explicitly or implicitly, parameterized or not)."
+  },
+  {
+    "id": 17,
+    "question": "Which collection class is synchronized and thread-safe among these options?",
+    "options": ["ArrayList", "Vector", "HashMap", "LinkedList"],
+    "correct": "Vector"
+  },
+  {
+    "id": 18,
+    "question": "What are all instance variables initialized to by default if no explicit initialization is provided?",
+    "options": [
+      "null for objects, 0 for numbers, false for booleans.",
+      "They are initialized to random values.",
+      "They are not initialized and must be set in the constructor.",
+      "They are all initialized to null."
+    ],
+    "correct": "null for objects, 0 for numbers, false for booleans."
+  },
+  {
+    "id": 19,
+    "question": "Which operator is used to create an instance of a class in Java?",
+    "options": ["new", "create", "instanceof", "allocate"],
+    "correct": "new"
+  },
+  {
+    "id": 20,
+    "question": "What is the minimum number of arguments a non-default constructor must have?",
+    "options": ["0", "1", "2", "3"],
+    "correct": "1"
+  },
+  {
+    "id": 21,
+    "question": "Which of the following is true about Java interfaces?",
+    "options": [
+      "An interface can have instance variables.",
+      "A class can implement only one interface.",
+      "Interface methods must always be defined as public abstract (though not explicitly required after Java 8).",
+      "Interfaces can contain constructors."
+    ],
+    "correct": "Interface methods must always be defined as public abstract (though not explicitly required after Java 8)."
+  },
+  {
+    "id": 22,
+    "question": "What does JIT stand for in the context of the Java Virtual Machine (JVM)?",
+    "options": [
+      "Java Interface Toolkit",
+      "Just-In-Time Compiler",
+      "Job Initialization Tool",
+      "Junction Interaction Thread"
+    ],
+    "correct": "Just-In-Time Compiler"
+  },
+  {
+    "id": 23,
+    "question": "If a class implements the Comparable interface, which method must it implement?",
+    "options": ["equals()", "hashCode()", "compareTo()", "sort()"],
+    "correct": "compareTo()"
+  },
+  {
+    "id": 24,
+    "question": "What is the process of converting a primitive data type into its corresponding wrapper class object called?",
+    "options": ["Casting", "Autoboxing", "Unboxing", "Boxing"],
+    "correct": "Autoboxing"
+  },
+  {
+    "id": 25,
+    "question": "What happens if you try to assign an object reference of a superclass to a subclass variable without an explicit cast?",
+    "options": [
+      "Compilation Error",
+      "Runtime Exception",
+      "The object is automatically downcast.",
+      "It works only if the superclass is abstract."
+    ],
+    "correct": "Compilation Error"
+  }
+]
