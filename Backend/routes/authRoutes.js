@@ -1,7 +1,7 @@
 import express from 'express';
 import { registerUser, loginUser, checkAuth, handleLogout } from '../controllers/authController.js';
 import { verifyUserIsLoggedIn } from '../middlewares/authMiddleware.js';
-import { verifyOtp } from '../service/OtpServices.js'; 
+import { verifyOtp } from '../service/otpServices.js'; 
 
 const router = express.Router(); 
 
