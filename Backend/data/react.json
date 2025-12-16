@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "react",
+    "name": "React",
+    "modules": [
+      {
+        "moduleNumber": 1,
+        "moduleTitle": "React Fundamentals",
+        "slug": "intro-and-setup",
+        "topics": [
+          "Introduction to React",
+          "React Environment Setup",
+          "React JS ReactDOM",
+          "React JSX",
+          "ReactJS Rendering Elements",
+          "React Lists",
+          "React Forms",
+          "ReactJS Keys"
+        ]
+      },
+      {
+        "moduleNumber": 2,
+        "moduleTitle": "Component in React",
+        "slug": "react-components",
+        "topics": [
+          "React Components",
+          "ReactJS Functional Components",
+          "React Class Components" 
+        ]
+      },
+      {
+        "moduleNumber": 3,
+        "moduleTitle": "React Hooks",
+        "slug": "react-hooks",
+        "contentUrl": "/content/java/control-flow.html",
+        "topics": [
+          "React Hooks",
+          "React useState Hook",
+          "ReactJS useEffect Hook"
+        ]
+      },
+      {
+        "moduleNumber": 4,
+        "moduleTitle": "Routing in React",
+        "slug": "react-routing",
+        "contentUrl": "/content/java/arrays-and-strings.html",
+        "topics": ["React Router", "React JS Types of Routers"]
+      },
+      {
+        "moduleNumber": 5,
+        "moduleTitle": "Advanced React Concepts",
+        "slug": "adv-concepts",
+        "topics": [
+          "Lazy Loading in React and How to Implement it ?",
+          "ReactJS Higher-Order Components",
+          "Code Splitting in React"
+        ]
+      },
+      {
+        "moduleNumber": 6,
+        "moduleTitle": "React Projects",
+        "slug": "react-projects",
+        "topics": [
+          "Create ToDo App using ReactJS",
+          "Create a Quiz App using ReactJS",
+          "Super Keyword",
+          "Encapsulation (Access Modifiers: public, private, protected, default)",
+          "Introduction to Packages and Import statements"
+        ]
+      }
+    ]
+  }
+]

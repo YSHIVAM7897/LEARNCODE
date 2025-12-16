@@ -1,0 +1,21 @@
+.login {
+  background-color: #ffac1c;
+}
+
+.customNavLink:hover {
+  transform: translateY(-2px);
+}
+
+/* 3. Add a specific class for the active state */
+.activeLink {
+  color: #000 !important;
+  transform: translateY(0);
+}
+
+.searchBar {
+  max-width: 200px;
+}
+
+.hideArrow :global(.dropdown-toggle::after) { 
+  display: none; 
+}

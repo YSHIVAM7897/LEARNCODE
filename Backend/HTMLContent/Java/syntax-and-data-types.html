@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Fundamentals Tutorial</title>
+    <style>   
+        .section-title {
+            border-bottom: 1px solid #000000;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        } 
+        
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .section-content p {
+            margin-bottom: 15px;
+        }
+        
+        /* Code blocks */
+        .code-block {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 3px solid #000000;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            border-radius: 3px;
+        }
+        
+        /* Example boxes */
+        .example-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px dashed #000000;
+            border-radius: 3px;
+        }
+        
+        /* Highlight important terms */
+        .term {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        /* Lists */
+        .features-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed #cccccc;
+        }
+        
+        .feature-item:before {
+            content: "• ";
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .content-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <!-- Comments and Code Structure Section -->
+       <div class="content-section" id="comments-structure">
+    <h2 id="0" class="section-title">Comments and Code Structure</h2>
+    <div class="section-content">
+        <p>Java code structure follows a logical organization that makes programs readable and maintainable. Think of it like building a house - you need a blueprint (structure) and notes for the builders (comments). When you look at a well-organized Java program, you'll notice it has a clear pattern and organization. This structure isn't just for appearance; it serves important practical purposes. A properly structured program is easier to understand, debug, and modify. It's like having a well-organized toolbox where you know exactly where to find each tool.</p>
+        
+        <p>Every Java program begins with a class definition. The class acts as a container that holds all the code for a particular program or component. Within this class, you'll find variables that store data, methods that perform actions, and sometimes other classes nested inside. The organization follows a specific hierarchy that Java expects. This consistent structure means that any Java programmer can look at your code and quickly understand how it's organized, even if they've never seen it before.</p>
+        
+        <div class="example-box">
+            <p><span class="term">Real-life analogy:</span> When constructing a building, architects include detailed notes (comments) explaining why certain design choices were made. Similarly, in programming, comments explain the "why" behind code decisions. Just as construction workers need both the blueprint and the architect's notes to build correctly, programmers need both the code structure and comments to understand how to work with the program effectively.</p>
+        </div>
+        
+        <p>Comments serve as the documentation within your code. They're notes that you leave for yourself and other programmers to explain what different parts of the code do. While the code itself tells the computer what to do, comments tell humans why the code was written that way. This is especially important when you need to revisit code you wrote months or years earlier, or when someone else needs to understand your work.</p>
+        
+        <p>Java supports three types of comments that serve different purposes. Single-line comments are perfect for brief explanations of what a single line or small section of code does. They start with two forward slashes and continue to the end of the line. Multi-line comments can span several lines and are useful for longer explanations that need more space. Documentation comments are special because they can be processed by tools like Javadoc to automatically generate documentation for your code.</p>
+        
+        <ul class="features-list">
+            <li class="feature-item"><span class="term">Single-line comments:</span> // This is a single-line comment - perfect for brief notes on specific lines</li>
+            <li class="feature-item"><span class="term">Multi-line comments:</span> /* This is a multi-line comment that can span several lines when you need more space */</li>
+            <li class="feature-item"><span class="term">Documentation comments:</span> /** This is a documentation comment used to generate API documentation */</li>
+        </ul>
+        
+        <p>When writing comments, focus on explaining why you made certain decisions rather than what the code does. The code itself already shows what it does. Good comments explain the reasoning behind complex logic, any workarounds for unusual situations, or references to business requirements that influenced the implementation. Avoid stating the obvious - instead, provide context that isn't immediately apparent from reading the code.</p>
+        
+        <div class="code-block">
+// Basic Java class structure
+public class MyClass {
+    // Class variables (properties) - store data for the class
+    private int myVariable;
+    
+    // Constructor - special method that runs when object is created
+    public MyClass(int value) {
+        this.myVariable = value;  // Initialize the variable with provided value
+    }
+    
+    // Method - performs an action using the class data
+    public void displayValue() {
+        System.out.println("Value: " + myVariable);
+    }
+    
+    // Main method - program entry point where execution begins
+    public static void main(String[] args) {
+        MyClass obj = new MyClass(42);  // Create object with initial value
+        obj.displayValue();             // Call method to show the value
+    }
+}
+        </div>
+        
+        <p>The structure of a Java class follows a conventional pattern that experienced programmers expect. Typically, you'll see class variables declared first, followed by constructors, then methods. Within methods, code is organized with proper indentation to show which lines belong together. This visual structure makes the logical structure clearer. Consistent indentation isn't just about aesthetics - it helps you quickly identify where blocks of code begin and end.</p>
+        
+        <p>Proper code structure includes meaningful class and method names, logical organization, and comments that explain complex logic. Class names should be nouns that describe what the class represents. Method names should be verbs that describe what the method does. Variable names should be descriptive enough that their purpose is clear. This naming convention makes your code self-documenting - meaning the names themselves provide much of the explanation that would otherwise require comments.</p>
+        
+        <p>When organizing your code, group related functionality together. Keep methods focused on single tasks. If a method becomes too long or complex, consider breaking it into smaller methods with clear names. This approach, often called the Single Responsibility Principle, makes your code easier to understand, test, and maintain. Each method should have one clear purpose that's evident from its name.</p>
+        
+        <p>Package organization is another important aspect of Java code structure. Related classes are grouped into packages, which act like folders for your code. This helps manage complexity in larger projects by keeping related code together and separating unrelated code. Proper package structure makes it easier to find classes and understand how different parts of a system relate to each other.</p>
+        
+        <p>Finally, consistent formatting throughout your codebase is crucial. Whether you use spaces or tabs for indentation, whether you put opening braces on the same line or the next line - what matters most is consistency. Many teams adopt coding standards to ensure everyone follows the same conventions. This consistency makes the code easier to read and work with, especially when multiple programmers are collaborating on the same project.</p>
+    </div>
+</div>
+        
+        <!-- Variables and Constants Section -->
+    <div class=" " id="1">
+    <h2 class="section-title">Variables and Constants</h2>
+    <div class="section-content">
+        <p>Variables are fundamental building blocks in Java programming that serve as named storage locations in computer memory. These storage locations hold data that can change and be manipulated during program execution. Think of variables as containers that can store different types of information, from simple numbers to complex text strings. Every variable in Java has three key characteristics: a name that identifies it, a type that defines what kind of data it can hold, and a value that represents the actual data stored in it. Understanding how to properly use variables is essential because they form the basis of how programs store and manipulate information.</p>
+        
+        <p>Constants are similar to variables in that they also represent named storage locations, but with one crucial difference: once a constant is assigned a value, that value cannot be changed throughout the program's execution. Constants provide a way to give meaningful names to values that should remain fixed, making code more readable and preventing accidental changes to important values. Using constants instead of literal values scattered throughout your code makes programs easier to maintain and less error-prone.</p>
+        
+        <div class="example-box">
+            <p><span class="term">Real-life analogy:</span> Think of variables as labeled boxes where you can store different items over time. You might have a box labeled "office supplies" that sometimes contains pens, sometimes contains paper clips, and sometimes contains both. Constants are like labeled boxes with permanent contents - imagine a box labeled "emergency flashlight" that always contains the same flashlight. Once you seal this box with its specific contents, you wouldn't change what's inside it, just as constants maintain their values throughout a program.</p>
+        </div>
+        
+        <p>In Java, every variable must be declared with a specific data type before it can be used. This declaration tells the Java compiler what kind of data the variable will hold and how much memory to allocate for it. The declaration process involves specifying the data type followed by the variable name. You can optionally initialize the variable with a starting value at the time of declaration. This strong typing system is one of Java's key features that helps prevent many common programming errors by ensuring that variables are always used in ways consistent with their declared types.</p>
+        
+        <p>Variable scope is another important concept to understand. Scope determines where in your program a variable can be accessed. Variables declared within a method are local to that method and cannot be accessed from outside. Instance variables belong to objects and are accessible throughout the class. Class variables (declared as static) are shared among all instances of a class. Understanding scope helps you design programs where variables are accessible where needed without causing conflicts or unexpected interactions between different parts of your code.</p>
+        
+        <div class="code-block">
+// Variable declaration and initialization examples
+int age = 25;                    // Variable - can change
+final double PI = 3.14159;       // Constant - cannot change
+String userName = "John";        // String variable
+boolean isActive = true;         // Boolean variable
+
+// Variable reassignment examples
+age = 26;                        // This is allowed - variables can change
+userName = "Jane";               // Changing string value
+isActive = false;                // Changing boolean value
+
+// Constant usage examples
+// PI = 3.14;                    // This would cause an error - constants can't be reassigned
+final int MAX_USERS = 100;       // Constant for maximum users
+final String COMPANY_NAME = "TechCorp";  // Constant for company name
+
+// Multiple variable declarations
+int x = 10, y = 20, z = 30;     // Declaring multiple variables of same type
+        </div>
+        
+        <p>Java follows specific naming conventions that make code more readable and maintainable. For variables, the camelCase convention is used, where the first word is lowercase and subsequent words are capitalized (e.g., studentName, totalScore, numberOfItems). For constants, the UPPER_CASE convention is used with words separated by underscores (e.g., MAX_SIZE, INTEREST_RATE, DEFAULT_TIMEOUT). Choosing descriptive and meaningful names is crucial because well-named variables make code self-documenting. When someone reads your code, they should be able to understand what each variable represents without needing extensive comments.</p>
+        
+        <p>When working with variables, it's important to understand the concept of variable lifetime. The lifetime of a variable refers to how long it exists in memory during program execution. Local variables exist only while the method in which they're declared is executing. Instance variables exist as long as the object they belong to exists. Class variables exist for the entire duration of the program. Understanding variable lifetime helps you manage memory efficiently and avoid issues like trying to use variables that no longer exist.</p>
+        
+        <p>Initialization is another critical aspect of variable usage. Unlike some programming languages, Java requires variables to be initialized before they can be used. This means you must assign a value to a variable before reading from it. This requirement helps prevent bugs caused by using uninitialized variables that contain garbage values. Local variables must be explicitly initialized, while instance and class variables are automatically initialized to default values (0 for numbers, false for booleans, null for objects) if no explicit initialization is provided.</p>
+        
+        <p>Constants play a particularly important role in making code maintainable. When you use constants instead of literal values, you create a single point of control. If you need to change a value that's used in multiple places, you only need to change it in one location—the constant declaration. This is much safer and more efficient than searching through your entire codebase to update multiple instances of the same literal value. Constants also make code more readable by giving meaningful names to what would otherwise be "magic numbers" or unexplained values.</p>
+        
+        <p>When deciding whether to use a variable or constant, consider how the value will be used. If the value needs to change during program execution, use a variable. If the value should remain fixed, use a constant. For values that are used multiple times throughout your program, constants are almost always the better choice. Even for values that are used only once, using a constant with a descriptive name can make your code clearer than using a literal value whose meaning might not be immediately obvious to someone reading your code.</p>
+        
+        <p>Proper variable and constant usage is fundamental to writing clean, maintainable Java code. By following naming conventions, choosing appropriate types, understanding scope and lifetime, and using constants effectively, you can create programs that are not only functionally correct but also easy to read, understand, and modify. These practices become increasingly important as programs grow in size and complexity, making the difference between code that's a pleasure to work with and code that's frustrating to maintain.</p>
+    </div>
+</div>
+        
+        <!-- Primitive Data Types Section -->
+      <div class="content-section" id="primitive-types">
+    <h2 class="section-title">Primitive Data Types</h2>
+    <div class="section-content">
+        <p>Java has eight primitive data types that represent simple values directly in memory. These fundamental building blocks form the foundation for storing and manipulating data in Java programs. Unlike objects, primitive types are not instances of classes and they store their values directly rather than as references. This direct storage makes primitive types more memory-efficient and faster to access than their object counterparts. Understanding these eight basic types is essential because they represent the most common kinds of data that programs work with on a daily basis.</p>
+        
+        <p>The primitive data types in Java can be categorized into four main groups: integer types for whole numbers, floating-point types for decimal numbers, a boolean type for true/false values, and a character type for single characters. Each type has a specific size and range of values it can represent, which determines when you should use one type versus another. This variety allows programmers to choose the most appropriate type for their specific needs, balancing memory usage with the required precision and range.</p>
+        
+        <div class="example-box">
+            <p><span class="term">Real-life analogy:</span> Just as we have different types of containers for different purposes (small boxes for jewelry, large crates for furniture), Java has different data types optimized for different kinds of data. You wouldn't use a massive shipping container to store a single ring, just as you wouldn't use a tiny jewelry box to store a sofa. Similarly, in programming, choosing the right data type means matching the container size to what you need to store, ensuring efficiency without wasting resources.</p>
+        </div>
+        
+        <p>The integer family consists of four types that represent whole numbers without decimal points. The smallest is the byte type, which uses 8 bits of memory and can store values from -128 to 127. This type is perfect for small numbers where memory conservation is important. Next is the short type, which uses 16 bits and ranges from -32,768 to 32,767. The int type is the most commonly used integer type, utilizing 32 bits with a range from approximately -2.1 billion to 2.1 billion. For extremely large numbers, the long type provides 64 bits of storage, capable of handling values up to 9 quintillion.</p>
+        
+        <p>Floating-point types handle numbers with decimal points, which are essential for scientific calculations, financial applications, and any situation requiring fractional precision. The float type uses 32 bits and provides single-precision floating-point numbers, while the double type uses 64 bits for double-precision. Although float requires less memory, double is generally preferred because it offers greater precision and is the default choice for decimal numbers in Java. The trade-off between these types involves balancing memory usage against the precision requirements of your calculations.</p>
+        
+        <div class="code-block">
+// Integer types (whole numbers)
+byte smallNumber = 100;          // 8-bit: -128 to 127 - ideal for small ranges
+short mediumNumber = 30000;      // 16-bit: -32,768 to 32,767 - good for medium values
+int population = 2000000;        // 32-bit: -2^31 to 2^31-1 (most common choice)
+long worldPopulation = 7800000000L; // 64-bit: -2^63 to 2^63-1 - for very large numbers
+
+// Floating-point types (decimal numbers)
+float price = 19.99f;            // 32-bit: single precision - note the 'f' suffix
+double preciseValue = 3.14159265359; // 64-bit: double precision (most common)
+
+// Other types
+boolean isJavaFun = true;        // true or false - for logical conditions
+char grade = 'A';                // 16-bit Unicode character - for single characters
+char unicodeChar = '\u0041';     // Also represents 'A' using Unicode
+
+// Additional examples showing proper usage
+byte age = 25;                   // Appropriate for human ages
+int distanceInKm = 1500;         // Suitable for most distance measurements
+double scientificValue = 1.496e11; // Scientific notation for large numbers
+boolean hasPermission = false;   // Simple true/false conditions
+char initial = 'J';              // Single character storage
+        </div>
+        
+        <p>The boolean type is the simplest of all primitive types, representing only two possible values: true or false. This type is fundamental for controlling program flow through conditional statements and loops. Every comparison operation in Java returns a boolean value, making it essential for decision-making in programs. Despite its simplicity, the boolean type is incredibly powerful because it enables the logical operations that drive all computer programming.</p>
+        
+        <p>The char type represents single characters using 16-bit Unicode encoding, which allows it to handle characters from virtually all writing systems in the world. Unlike some programming languages that use ASCII (limited to 128 characters), Java's use of Unicode means it can properly represent English letters, accented characters, Chinese ideographs, Arabic script, and many other writing systems. This international support makes Java particularly well-suited for global applications that need to handle multiple languages.</p>
+        
+        <p>Choosing the right data type involves considering several factors including the range of values you need to store, the precision required, memory constraints, and performance considerations. For most general-purpose programming, int and double will cover the majority of your numerical needs. However, when working with large arrays or memory-constrained environments, using smaller types like byte or short can significantly reduce memory usage. Similarly, when working with very large numbers that exceed the range of int, long becomes necessary.</p>
+        
+        <p>Each primitive type has corresponding wrapper classes (Byte, Short, Integer, Long, Float, Double, Boolean, Character) that allow primitive values to be treated as objects when needed. This is particularly important when working with Java collections, which can only store objects, not primitives. However, for most everyday programming tasks, the primitive versions are preferred due to their better performance and lower memory overhead.</p>
+        
+        <p>Understanding the default values of primitive types is also important. When declared as instance variables (class members), primitives are automatically initialized to default values: 0 for numeric types, false for boolean, and '\u0000' (null character) for char. However, local variables (declared within methods) are not automatically initialized and must be assigned a value before use, otherwise the compiler will generate an error. This safety feature helps prevent bugs caused by using uninitialized variables.</p>
+        
+        <p>Mastering Java's primitive data types provides a solid foundation for understanding more complex data structures and algorithms. These eight simple types, when combined and used appropriately, can represent virtually any kind of data that programs need to process. By choosing the right type for each situation, you can write programs that are not only correct but also efficient and maintainable.</p>
+    </div>
+</div>
+        
+        <!-- Type Casting Section -->
+       <div class="content-section" id="type-casting">
+    <h2 class="section-title">Type Casting (Implicit and Explicit)</h2>
+    <div class="section-content">
+        <p>Type casting is the process of converting a value from one data type to another in Java programming. This conversion mechanism is essential when you need to work with different data types together or when you want to store a value in a variable of a different type. Java provides two distinct approaches to type casting: implicit casting, which happens automatically without programmer intervention, and explicit casting, which requires direct instruction from the programmer. Understanding when and how to use each type of casting is crucial for writing correct and efficient Java programs that handle data appropriately.</p>
+        
+        <p>Implicit casting, also known as automatic type conversion or widening conversion, occurs when Java automatically converts a smaller data type to a larger compatible data type without any explicit instructions from the programmer. This process is considered safe because it doesn't risk data loss—the larger type can comfortably accommodate all possible values from the smaller type. Java's compiler is smart enough to recognize these safe conversions and performs them automatically, making programming more convenient while maintaining data integrity.</p>
+        
+        <div class="example-box">
+            <p><span class="term">Real-life analogy:</span> Implicit casting is like pouring water from a small cup to a larger container - it happens naturally without spillage because the larger container has ample space to hold everything from the smaller cup. Explicit casting is like trying to fit a large object into a smaller space - you need to consciously reshape or compress it, and there's a risk that some parts might not fit or could get damaged in the process. Just as you wouldn't automatically try to force a sofa through a small doorway without careful planning, Java requires explicit instructions for potentially problematic type conversions.</p>
+        </div>
+        
+        <p>The hierarchy for implicit casting follows a specific order based on the size and precision of data types. The general progression moves from smaller to larger types: byte → short → int → long → float → double. This order ensures that conversions maintain data integrity. For example, when converting from an int to a double, the integer value can be perfectly represented as a floating-point number without any loss of information. Similarly, converting from a byte to an int is safe because all possible byte values fit within the range of integer values.</p>
+        
+        <p>Explicit casting, also called narrowing conversion, requires the programmer to explicitly specify the desired conversion using casting syntax. This type of casting is necessary when converting from a larger data type to a smaller one, which carries the risk of data loss or precision reduction. The programmer must use parentheses containing the target type before the value being converted. By requiring explicit casting for potentially unsafe conversions, Java forces programmers to acknowledge and accept responsibility for any potential data loss that might occur.</p>
+        
+        <div class="code-block">
+// Implicit casting (widening conversion) - automatic and safe
+int myInt = 9;
+double myDouble = myInt;  // Automatic conversion: int to double
+System.out.println(myInt);     // Outputs 9
+System.out.println(myDouble);  // Outputs 9.0
+
+long bigNumber = myInt;        // int to long - automatic widening
+float decimalValue = bigNumber; // long to float - automatic
+
+// Explicit casting (narrowing conversion) - manual and potentially unsafe
+double anotherDouble = 9.78;
+int anotherInt = (int) anotherDouble;  // Manual conversion: double to int
+System.out.println(anotherDouble);  // Outputs 9.78
+System.out.println(anotherInt);     // Outputs 9 (decimal part truncated)
+
+// More explicit casting examples
+long largeValue = 3000000000L;
+int smallerInt = (int) largeValue;    // Potential data loss if value too large
+short smallShort = (short) smallerInt; // Further narrowing
+byte tinyByte = (byte) smallShort;    // Maximum risk of data loss
+
+// Character casting examples
+char letter = 'A';
+int letterCode = letter;              // Implicit: char to int (gets ASCII value)
+char newLetter = (char) 66;           // Explicit: int to char (becomes 'B')
+        </div>
+        h
+        <p>When performing explicit casting, several important considerations come into play. The most significant risk is data loss, which occurs when the original value cannot be perfectly represented in the target type. For example, when casting from a double to an int, the decimal portion is truncated (cut off), not rounded. This means that 9.78 becomes 9, and 9.99 also becomes 9. If you need proper rounding instead of truncation, you would need to use Math.round() or similar methods before casting.</p>
+        
+        <p>Another important aspect of type casting involves working with char data types. Characters in Java are represented using Unicode values, and they can be implicitly cast to integer types because each character corresponds to a specific numeric code. However, going from numeric types back to characters requires explicit casting to ensure the programmer is aware they're converting a number to its character representation. This is particularly useful when working with character encoding systems or performing character arithmetic.</p>
+        
+        <p>Type casting also plays a crucial role in object-oriented programming when working with class hierarchies. While primitive type casting deals with simple values, reference type casting involves converting between different class types in an inheritance hierarchy. The principles are similar—upcasting (moving up the inheritance tree) is generally safe and can be implicit, while downcasting (moving down the inheritance tree) requires explicit casting and carries risks similar to primitive narrowing conversions.</p>
+        
+        <p>It's important to understand that not all type conversions are possible through casting alone. For converting between incompatible types, such as converting a String to an int or vice versa, Java provides specialized methods like Integer.parseInt() for string to integer conversion, or String.valueOf() for converting numbers to strings. These methods handle the complex parsing and formatting required for such conversions, which simple casting cannot accomplish.</p>
+        
+        <p>Best practices for type casting include using implicit casting whenever possible to maintain code clarity and safety, being extremely cautious with explicit casting and always considering potential data loss, and using appropriate methods for conversions that casting cannot handle. Well-planned type usage can often minimize the need for excessive casting, leading to cleaner and more maintainable code. When casting is necessary, adding comments to explain why the cast is needed and what potential issues might arise can help other programmers understand your intentions and maintain the code properly.</p>
+        
+        <p>Mastering type casting is essential for effective Java programming, as it enables flexible data manipulation while maintaining type safety. By understanding when to rely on Java's automatic conversions and when to take control with explicit casting, you can write programs that handle data appropriately across different types and situations. This knowledge becomes particularly important when working with mathematical calculations, user input processing, and data transformation tasks that are common in real-world applications.</p>
+    </div>
+</div>
+        
+        <!-- Operators Section -->
+    <div class="content-section" id="operators">
+    <h2 class="section-title">Operators</h2>
+    <div class="section-content">
+        <p>Operators are special symbols that perform operations on variables and values in Java. Think of them as the action words of programming that tell the computer what to do with your data. Java has several categories of operators, each designed for specific types of operations. Understanding these operators is essential because they allow you to manipulate data, make decisions, and control how your program behaves.</p>
+        
+        <div class="example-box">
+            <p><span class="term">Real-life analogy:</span> Operators are like tools in a toolbox. Just as you use different tools (hammer, screwdriver, wrench) for different tasks, you use different operators for different programming operations. A hammer (arithmetic operator) helps you build things, a measuring tape (relational operator) helps you compare sizes, and a switch (logical operator) helps you control when things turn on and off.</p>
+        </div>
+        
+        <p>Arithmetic operators handle basic math operations. The plus sign (+) adds numbers, the minus sign (-) subtracts them, the asterisk (*) multiplies, and the slash (/) divides. The modulus operator (%) gives you the remainder after division. These work just like basic math but with some computer-specific rules, like integer division truncating decimal results.</p>
+        
+        <p>Relational operators compare values and return true or false. The double equals (==) checks if two values are equal, while != checks if they're different. Greater than (>) and less than (<) symbols work like in math, helping your program make decisions based on comparisons.</p>
+        
+        <div class="code-block">
+// Arithmetic operators (basic math)
+int a = 10, b = 3;
+int sum = a + b;        // Addition: 10 + 3 = 13
+int difference = a - b; // Subtraction: 10 - 3 = 7
+int product = a * b;    // Multiplication: 10 × 3 = 30
+int quotient = a / b;   // Division: 10 ÷ 3 = 3 (no decimal)
+int remainder = a % b;  // Remainder: 10 ÷ 3 = 3 with 1 left over
+
+// Relational operators (comparisons)
+boolean isEqual = (a == b);      // Is 10 equal to 3? false
+boolean isNotEqual = (a != b);   // Is 10 not equal to 3? true
+boolean isGreater = (a > b);     // Is 10 greater than 3? true
+
+// Logical operators (true/false logic)
+boolean x = true, y = false;
+boolean andResult = x && y;      // Both true? false
+boolean orResult = x || y;       // Either true? true
+boolean notResult = !x;          // Opposite of true? false
+
+// Assignment operators (changing values)
+int num = 10;           // Set num to 10
+num += 5;               // Add 5 to num (now 15)
+num *= 2;               // Multiply num by 2 (now 30)
+
+// Unary operators (single value operations)
+int value = 5;
+value++;                // Increase by 1 (now 6)
+value--;                // Decrease by 1 (back to 5)
+        </div>
+        
+        <p>Logical operators work with true/false values. The AND operator (&&) returns true only if both sides are true. The OR operator (||) returns true if at least one side is true. The NOT operator (!) flips true to false and false to true. These are essential for complex decision-making in programs.</p>
+        
+        <p>Assignment operators not only assign values but can also modify them in place. Instead of writing num = num + 5, you can write num += 5. This shorthand makes code cleaner and easier to read. Unary operators work on single values, like incrementing (++) or decrementing (--) a number by one.</p>
+        
+        <p>Operator precedence determines which operations happen first, following math rules: multiplication and division before addition and subtraction. When in doubt, use parentheses to make the order clear. For example, 2 + 3 * 4 equals 14 (not 20) because multiplication comes first. Writing (2 + 3) * 4 makes it clear you want 20.</p>
+        
+        <p>Mastering operators is like learning the vocabulary of Java programming. They're the building blocks that let you perform calculations, make comparisons, and control how your program flows. With practice, using these operators becomes second nature, allowing you to write clear and effective code.</p>
+    </div>
+</div>
+</body>
+</html>

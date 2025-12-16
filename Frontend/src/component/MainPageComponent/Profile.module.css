@@ -1,0 +1,35 @@
+.custome-container {
+  padding: 6rem;
+}
+
+.left-container {
+  width: 50%;
+}
+
+.certificate-bg{ 
+  width: 200px;
+  background: #fcececff
+}
+
+.edu-list {  
+  gap: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .custome-container{
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
+}
+
+.left-container {
+  width: 100%;
+}
+
+.certificate-bg{ 
+  width: 100%;
+}
+
+.edu-list {
+  gap: 0;
+  flex-direction: column;
+}
+}
