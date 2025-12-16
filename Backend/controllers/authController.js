@@ -94,7 +94,7 @@ const handleLogout = async (req, res) => {
     res.cookie('Authtoken', token, {
       httpOnly: true,
       secure: true,
-      sameSite: 'lax', 
+      sameSite: 'none', 
       expires: new Date(0),
     });
 
