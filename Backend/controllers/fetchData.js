@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 
 // Read all supported languages once
 const allLanguages = JSON.parse(
-  fs.readFileSync(join(__dirname, "../data/SupportLang.json"), "utf8")
+  fs.readFileSync(join(__dirname, "../data/supportLang.json"), "utf8")
 );
 
 // Fetch all languages
@@ -25,7 +25,7 @@ export const fetchLanguageBySlug = async (req, res) => {
     const { slug } = req.params;
 
     const language = JSON.parse(
-      fs.readFileSync(join(__dirname, `../Data/${slug}.json`), "utf8")
+      fs.readFileSync(join(__dirname, `../data/${slug}.json`), "utf8")
     );
 
     if (!language) {
@@ -43,7 +43,7 @@ export const fetchLanguageModules = async (req, res) => {
   try {
     const { slug, module } = req.params;
 
-    const filePath = join(__dirname, `../HTMLContent/${slug}/${module}.json`);
+    const filePath = join(__dirname, `../htmlContent/${slug}/${module}.json`);
 
     if (!fs.existsSync(filePath)) {
       return res.status(404).json({ message: "Module not found" });
@@ -62,7 +62,7 @@ export const fetchLanguageModules = async (req, res) => {
 export const fetchQuizData = async (req, res) => {
   try {
     const { slug } = req.params; 
-    const filePath = join(__dirname, `../Quiz/${slug}.json`); 
+    const filePath = join(__dirname, `../quiz/${slug}.json`); 
     
     if (!fs.existsSync(filePath)) {
       return res.status(404).json({ message: "Quiz data not found" });

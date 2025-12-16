@@ -1,6 +1,6 @@
 // Fetch all supported languages
 export const fetchSupportedLanguage = async () => {
-  const result = await fetch("http://localhost:5000/api/data/getLanguage");
+  const result = await fetch("https://learncode-i5lr.onrender.com/api/data/getLanguage");
   const data = await result.json();
   return data;
 };
@@ -8,7 +8,7 @@ export const fetchSupportedLanguage = async () => {
 // Fetch content for a specific language by slug
 export const fetchLanguageContent = async (slug) => {
   const result = await fetch(
-    `http://localhost:5000/api/data/getLanguage/${slug}`
+    `https://learncode-i5lr.onrender.com/api/data/getLanguage/${slug}`
   );
   const data = await result.json();
   return data;
@@ -17,7 +17,7 @@ export const fetchLanguageContent = async (slug) => {
 // Fetch content for a specific topic by language and topic ID
 export const fetchTopicContent = async (language, topicId) => {
   const result = await fetch(
-    `http://localhost:5000/api/data/getTopic/${language}/${topicId}`
+    `https://learncode-i5lr.onrender.com/api/data/getTopic/${language}/${topicId}`
   );
   const data = await result.text();
   return data;
@@ -25,7 +25,7 @@ export const fetchTopicContent = async (language, topicId) => {
 
 //fetch quiz data for a specific language by slug
 export const fetchQuizData = async (slug) => {
-  const result = await fetch(`http://localhost:5000/api/data/getQuiz/${slug}`, {
+  const result = await fetch(`https://learncode-i5lr.onrender.com/api/data/getQuiz/${slug}`, {
     method: "GET",
     credentials: "include",
   });
@@ -42,7 +42,7 @@ export const fetchQuizData = async (slug) => {
 
 export const generateCertificate = async (language, percent) => {
   const response = await fetch(
-    `http://localhost:5000/api/certificates/generate`,
+    `https://learncode-i5lr.onrender.com/api/certificates/generate`,
     {
       method: "POST",
       credentials: "include", 
@@ -64,7 +64,7 @@ export const generateCertificate = async (language, percent) => {
 
 export const fetchCertificateById = async (id) => {
   const response = await fetch(
-    `https://learn-code-t4ym.onrender.com/api/certificates/${id}`,
+    `https://learncode-i5lr.onrender.com/api/certificates/${id}`,
     {
       method: "GET",
       credentials: "include",
@@ -77,7 +77,7 @@ export const fetchCertificateById = async (id) => {
 
 export const fetchAllCertificate = async () => {
   const response = await fetch(
-    `http://localhost:5000/api/certificates`,
+    `https://learncode-i5lr.onrender.com/api/certificates`,
     {
       method: "GET",
       credentials: "include",

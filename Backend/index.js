@@ -18,8 +18,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use(cors({
-  origin: "https://learncodex.netlify.app", 
+app.use(cors({ 
+  origin: "https://learncodex.netlify.app",  
   credentials: true
 }));
 

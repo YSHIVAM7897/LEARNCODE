@@ -1,6 +1,6 @@
 const getProfileDetails = async (userId) => {
   console.log(userId)
-  const res = await fetch(`http://localhost:5000/api/profile/user/${userId}`, {
+  const res = await fetch(`https://learncode-i5lr.onrender.com/api/profile/user/${userId}`, {
     method: 'GET',
     credentials: "include",
     headers: {
@@ -15,7 +15,7 @@ const getProfileDetails = async (userId) => {
 
 
 const uploadResume = async ( resume ) => {
-  const res = fetch('http://localhost:5000/api/profile/update/link',  {
+  const res = fetch('https://learncode-i5lr.onrender.com/api/profile/update/link',  {
     method: 'PUT',
     credentials: 'include',
     headers: { "Content-Type": "multipart/form-data" },
@@ -26,7 +26,7 @@ const uploadResume = async ( resume ) => {
 }
 
 const updateLinks = async ( data ) => {
-  const res = fetch('http://localhost:5000/api/profile/update/link',
+  const res = fetch('https://learncode-i5lr.onrender.com/api/profile/update/link',
     {
       method: 'PUT',
       credentials: "include",
@@ -43,7 +43,7 @@ const updateLinks = async ( data ) => {
 }
 
 const updateEduData = async ( data ) => {
-  const res = fetch('http://localhost:5000/api/profile/update/educationDetails',
+  const res = fetch('https://learncode-i5lr.onrender.com/api/profile/update/educationDetails',
     {
       method: 'PUT',
       credentials: "include",

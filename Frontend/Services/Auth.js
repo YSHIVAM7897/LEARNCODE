@@ -1,5 +1,5 @@
 const loginUser = async (user) => {
-  return fetch("http://localhost:5000/api/login", {
+  return fetch("https://learncode-i5lr.onrender.com/api/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,7 +12,7 @@ const loginUser = async (user) => {
 };
 
 const registerUser = async (user) => {
-  return fetch("http://localhost:5000/api/register", {
+  return fetch("https://learncode-i5lr.onrender.com/api/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +24,7 @@ const registerUser = async (user) => {
 };
 
 const verifyOtp = async (email, otp) => {
-  const result = await fetch("http://localhost:5000/api/register/verify-otp", {
+  const result = await fetch("https://learncode-i5lr.onrender.com/api/register/verify-otp", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const verifyOtp = async (email, otp) => {
  }
 
 const logout = async () => {
-  return fetch("http://localhost:5000/api/logout", {
+  return fetch("https://learncode-i5lr.onrender.com/api/logout", {
     method: "POST",
     credentials: "include",
   }).then((response) => {
@@ -47,7 +47,7 @@ const logout = async () => {
 
 const isUserLoggedIn = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/checkAuth", {
+    const response = await fetch("https://learncode-i5lr.onrender.com/api/checkAuth", {
       method: "GET",
       credentials: "include",
     });
