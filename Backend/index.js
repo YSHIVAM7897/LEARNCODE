@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: "http://localhost:5173", // change later for frontend
+  origin: "https://learncodex.netlify.app", 
   credentials: true
 }));
 
